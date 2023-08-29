@@ -1,0 +1,515 @@
+:root {
+  --color-fondo: #fff6e5;
+  --color-botones: #7f3dff;
+  --color-letra-saldo-total: #91919f;
+  --color-btn-ingreso: #00a86b;
+  --color-btn-gastos: #fd3c4a;
+  --color-seccion-transacciones: #a89696;
+  --color-card-transaccion: #d9d9d9;
+  --color-letra-categoria-transaccion: #767474;
+  --color-footer: #c6c6c6;
+  --color-ingresa-monto: #0a0000;
+  --color-body: #A0E5D5;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+input {
+  border: none;
+}
+
+/*Nav*/
+
+nav {
+  max-width: 320px;
+  margin: auto;
+  font-size: 1.6rem;
+}
+
+/*Main*/
+/* Contenedor de Saldo total e ingresos-gastos */
+main {
+  max-width: 320px;
+  margin: auto;
+}
+
+.main.segundo-plano {
+  opacity: 50%;
+}
+
+main .contenedor-total {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--color-fondo);
+  padding-bottom: 2rem;
+}
+
+/********************************************SECCION AGREGAR TRANSACCIÓN*****************************/
+
+main .contenedor-btn-add {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  justify-content: center;
+  background-color: var(--color-fondo);
+}
+
+main .contenedor-btn-add i {
+  font-size: 5rem;
+  color: var(--color-botones);
+  cursor: pointer;
+}
+
+/********************************************SECCION SALDO TOTAL*****************************/
+
+/*Contenedores de Saldo Total*/
+main .contenedor-total .contenedor-saldo {
+  padding-top: 4rem;
+  padding-bottom: 2.5rem;
+  width: 65%;
+  margin: auto;
+  text-align: center;
+}
+
+main .contenedor-total .contenedor-saldo h2 {
+  font-size: 1.4rem;
+  color: var(--color-letra-saldo-total);
+  font-weight: 400;
+}
+
+main .contenedor-total .contenedor-saldo p {
+  font-size: 4rem;
+  color: black;
+  font-weight: 450;
+}
+
+/********************************************SECCION INGRESOS Y GASTOS*****************************/
+
+/*Contenedores de Ingresos y Gastos*/
+main .contenedor-total .contenedor-ingresos-gastos {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/*Modelo Contenedor*/
+
+main .contenedor-total .contenedor-ingresos-gastos .modelo-contenedor {
+  width: 14.5rem;
+  height: 7rem;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem;
+}
+
+/************************************************Boton Ingreso*****************************/
+main .contenedor-total .contenedor-ingresos-gastos .contenedor-ingresos {
+  background-color: var(--color-btn-ingreso);
+  color: white;
+}
+
+main
+  .contenedor-total
+  .contenedor-ingresos-gastos
+  .modelo-contenedor
+  .contenedor-icono-ingresos {
+  display: flex;
+  width: 30%;
+  background-color: white;
+  border-radius: 0.8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+main
+  .contenedor-total
+  .contenedor-ingresos-gastos
+  .modelo-contenedor
+  .contenedor-icono-ingresos
+  i {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-btn-ingreso);
+}
+
+main
+  .contenedor-total
+  .contenedor-ingresos-gastos
+  .modelo-contenedor
+  .contenedor-info-ingresos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  width: 60%;
+}
+
+main
+  .contenedor-total
+  .contenedor-ingresos-gastos
+  .modelo-contenedor
+  .contenedor-info-ingresos
+  p {
+  font-size: 2.2rem;
+}
+
+/*********************************Boton Compras*************************************/
+
+main .contenedor-total .contenedor-ingresos-gastos .contenedor-gastos {
+  background-color: var(--color-btn-gastos);
+  color: white;
+}
+
+main
+  .contenedor-total
+  .contenedor-ingresos-gastos
+  .modelo-contenedor
+  .contenedor-icono-gastos {
+  display: flex;
+  width: 30%;
+  background-color: white;
+  border-radius: 0.8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+main
+  .contenedor-total
+  .contenedor-ingresos-gastos
+  .modelo-contenedor
+  .contenedor-icono-gastos
+  i {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-btn-gastos);
+}
+
+main
+  .contenedor-total
+  .contenedor-ingresos-gastos
+  .modelo-contenedor
+  .contenedor-info-gastos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  width: 60%;
+}
+
+main
+  .contenedor-total
+  .contenedor-ingresos-gastos
+  .modelo-contenedor
+  .contenedor-info-gastos
+  p {
+  font-size: 2.2rem;
+}
+
+/***********************************SECCIÓN TRANSACCIONES*************************************/
+.seccion-transacciones {
+  background-color: var(--color-seccion-transacciones);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  max-width: 320px;
+  margin: auto;
+}
+
+.seccion-transacciones.segundo-plano {
+  opacity: 50%;
+}
+
+.seccion-transacciones .contenedor-filtros .filtros {
+  justify-content: space-around;
+  font-size: 1.4rem;
+  border: 1px solid white;
+  border-radius: 5rem;
+  color: white;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0;
+}
+
+.seccion-transacciones .contenedor-filtros .filtros .filtro-item {
+  text-align: center;
+}
+
+.seccion-transacciones .contenedor-filtros .filtros .item-seleccionado {
+  font-weight: bold;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.seccion-transacciones .contenedor-titulos {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.4rem;
+}
+
+.seccion-transacciones .contenedor-transacciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.seccion-transacciones .contenedor-transacciones .transaccion-card {
+  width: 90%;
+  font-size: 1.5rem;
+  padding-inline: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-card-transaccion);
+  border-radius: 1rem;
+  align-items: center;
+  min-height: 5.4rem;
+}
+
+.seccion-transacciones
+  .contenedor-transacciones
+  .transaccion-card
+  .contenedor-icono-moneda-monto {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 0.5rem;
+}
+
+.seccion-transacciones
+  .contenedor-transacciones
+  .transaccion-card
+  .contenedor-icono-moneda-monto
+  i {
+  font-size: 3rem;
+}
+
+.seccion-transacciones
+  .contenedor-transacciones
+  .transaccion-card
+  .contenedor-icono-moneda-monto
+  .icono-ingreso {
+  color: var(--color-btn-ingreso);
+}
+
+.seccion-transacciones
+  .contenedor-transacciones
+  .transaccion-card
+  .contenedor-icono-moneda-monto
+  .icono-gasto {
+  color: var(--color-btn-gastos);
+}
+
+.seccion-transacciones
+  .contenedor-transacciones
+  .transaccion-card
+  .categoria-transaccion {
+  margin-right: 1rem;
+  margin-bottom: 0;
+  text-align: center;
+  color: var(--color-letra-categoria-transaccion);
+}
+
+/*++++++++++++++++++++++++++ SECCIÓN AGREGAR TRANSACCIÓN ++++++++++++++++++++++++++++++++++++++++*/
+
+.contenedor-agregar-transaccion {
+  padding: 3rem;
+  background-color: var(--color-fondo);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 320px;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+.contenedor-agregar-transaccion.desactive {
+  display: none;
+}
+
+.contenedor-agregar-transaccion .contenedor-parte-superior {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.contenedor-agregar-transaccion .contenedor-parte-superior i {
+  cursor: pointer;
+}
+
+.contenedor-agregar-transaccion .contenedor-parte-inferior {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contenedor-agregar-transaccion
+  .contenedor-parte-inferior
+  .contenedor-cantidad
+  h3 {
+  font-size: 1.8rem;
+  color: var(--color-ingresa-monto);
+}
+
+.contenedor-agregar-transaccion
+  .contenedor-parte-inferior
+  .contenedor-cantidad
+  input {
+  border: none;
+  font-size: 2rem;
+}
+
+.contenedor-agregar-transaccion
+  .contenedor-parte-inferior
+  .contenedor-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.contenedor-agregar-transaccion
+  .contenedor-parte-inferior
+  .contenedor-formulario
+  form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contenedor-agregar-transaccion
+  .contenedor-parte-inferior
+  .contenedor-formulario
+  form
+  input {
+  font-size: 1.6rem;
+  margin-block: 0.5rem;
+  height: 3rem;
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 1rem;
+}
+
+.contenedor-agregar-transaccion
+  .contenedor-parte-inferior
+  .contenedor-formulario
+  form
+  .contenedor-opciones {
+  margin: auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+}
+
+.contenedor-agregar-transaccion
+  .contenedor-parte-inferior
+  .contenedor-formulario
+  form
+  .contenedor-opciones
+  span {
+  border-radius: 5px;
+  padding-block: 0.3rem;
+  padding-inline: 1rem;
+}
+
+.contenedor-agregar-transaccion
+  .contenedor-parte-inferior
+  .contenedor-formulario
+  form
+  .contenedor-opciones
+  .opcion-ingresos {
+  background-color: var(--color-btn-ingreso);
+  cursor: pointer;
+}
+
+.contenedor-agregar-transaccion
+  .contenedor-parte-inferior
+  .contenedor-formulario
+  form
+  .contenedor-opciones
+  .opcion-ingresos.seleccionado {
+  background-color: var(--color-ingresa-monto);
+}
+
+.contenedor-agregar-transaccion
+  .contenedor-parte-inferior
+  .contenedor-formulario
+  form
+  .contenedor-opciones
+  .opcion-gastos {
+  background-color: var(--color-btn-gastos);
+  cursor: pointer;
+}
+
+.contenedor-agregar-transaccion
+  .contenedor-parte-inferior
+  .contenedor-formulario
+  form
+  .contenedor-opciones
+  .opcion-gastos.seleccionado {
+  background-color: var(--color-ingresa-monto);
+}
+
+.contenedor-agregar-transaccion
+  .contenedor-parte-inferior
+  .contenedor-formulario
+  form
+  label {
+  font-size: 1.4rem;
+}
+
+.contenedor-agregar-transaccion
+  .contenedor-parte-inferior
+  .contenedor-formulario
+  button {
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+  font-size: 1.8rem;
+  background-color: var(--color-botones);
+  border: none;
+  border-radius: 2rem;
+}
+
+@media (min-width: 375px) {
+  .contenedor-principal {
+    margin-top: 8rem;
+  }
+
+  nav {
+    border-radius: 10px 10px 0 0;
+  }
+
+  nav div div ul {
+    margin: 0 auto;
+  }
+
+  body div .seccion-transacciones {
+    border-radius: 0 0 10px 10px;
+  }
+}
