@@ -39,4 +39,5 @@ Puedes contactarme en franciscod3v@gmail.com.
 
 ## Estado del Proyecto
 
+>>>>>>> 4b76354d8460151a63cdd733e6507668377f9d52
 En Desarrollo / Mantenimiento Activo
