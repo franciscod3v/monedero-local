@@ -1,0 +1,116 @@
+:root {
+    --color-fondo: #fff6e5;
+    --color-botones: #7f3dff;
+    --color-letra-saldo-total: #91919f;
+    --color-btn-ingreso: #00a86b;
+    --color-btn-gastos: #fd3c4a;
+    --color-seccion-transacciones: #a89696;
+    --color-card-transaccion: #d9d9d9;
+    --color-letra-categoria-transaccion: #767474;
+    --color-footer: #c6c6c6;
+    --color-ingresa-monto: #0a0000;
+    --color-body: #A0E5D5;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-principal-transacciones {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-fondo);
+    min-width: 320px;
+    max-width: 375px;
+}
+
+.contenedor-principal-transacciones .seccion-cabecera-transacciones {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    height: 2.5rem;
+    font-size: 1.8rem;
+    margin: 1.6rem;
+}
+
+.contenedor-principal-transacciones .seccion-cabecera-transacciones .contenedor-btn-regresar {
+    padding-inline: 1.5rem;
+}
+
+.contenedor-principal-transacciones .seccion-cabecera-transacciones .contenedor-btn-regresar i {
+    cursor: pointer;
+}
+
+.contenedor-principal-transacciones .seccion-filtros-transacciones {
+    padding-top: 2.5rem;
+    width: 60%;
+    margin: auto;
+}
+
+.contenedor-principal-transacciones .seccion-filtros-transacciones .contenedor-filtros {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.contenedor-principal-transacciones .seccion-filtros-transacciones .contenedor-filtros select {
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid;
+    border-radius: 2rem;
+}
+
+.contenedor-principal-transacciones .seccion-lista-transacciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 2rem;
+    gap: 2rem;
+}
+
+.contenedor-principal-transacciones .seccion-lista-transacciones .contenedor-transaccion {
+    background-color: white;
+    font-size: 1.6rem;
+    padding: 1.3rem;
+    width: 90%;
+    border-radius: 2rem;
+}
+
+.contenedor-principal-transacciones .seccion-lista-transacciones .contenedor-transaccion .contenedor-categoria-importe {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.contenedor-principal-transacciones .seccion-lista-transacciones .contenedor-transaccion .contenedor-descripcion-fecha {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    color: var(--color-letra-saldo-total);
+}
+
+.contenedor-principal-transacciones .seccion-lista-transacciones .contenedor-transaccion .contenedor-categoria-importe .importe-gasto{
+    color: var(--color-btn-gastos);
+}
+
+.contenedor-principal-transacciones .seccion-lista-transacciones .contenedor-transaccion .contenedor-categoria-importe .importe-ingreso{
+    color: var(--color-btn-ingreso);
+}
+
+@media (min-width: 375px) {
+    .contenedor-principal-transacciones {
+      margin-top: 8rem;
+    }
+  }
+  

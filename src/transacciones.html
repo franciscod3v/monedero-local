@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tus Transacciones</title>
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!--Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <!--CSS-->
+    <link rel="stylesheet" href="../style/transacciones.css" />
+  </head>
+  <body>
+    <div class="contenedor-principal-transacciones">
+      <section class="seccion-cabecera-transacciones">
+        <div class="contenedor-btn-regresar">
+          <a href="../index.html"><i id="btn-regresar-a-index" class="bi bi-arrow-left"></i></a>
+        </div>
+        <h2>Transacciones</h2>
+      </section>
+      <!--Sección filtros-->
+      <section class="seccion-filtros-transacciones">
+        <div class="contenedor-filtros">
+          <select id="filtro-tiempo" class="form-select" aria-label="Default select example">
+            <option value="Todos">Todos</option>
+            <option value="Hoy">Hoy</option>
+            <option value="Semana">Semana</option>
+            <option value="Mes">Mes</option>
+            <option value="Año">Año</option>
+          </select>
+          <select id="filtro-categoria" class="form-select" aria-label="Default select example">
+            <option value="Todos">Todos</option>
+            <option value="Ingresos">Ingresos</option>
+            <option value="Gastos">Gastos</option>
+          </select>
+        </div>
+      </section>
+      <!--Sección transacciones-->
+      <section class="seccion-lista-transacciones">
+      </section>
+    </div>
+    <!--Script-->
+    <script src="../javascript/transacciones.js"></script>
+  </body>
+</html>
